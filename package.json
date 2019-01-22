@@ -1,6 +1,6 @@
 {
   "name": "requirejs-config",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "The small utilities to load require.js config path and shim configuration.",
   "main": "index.js",
   "scripts": {

@@ -6,4 +6,11 @@ export default {
   shim: {
 
   },
+  packages:[
+    {
+      name: 'ufo-kit',
+      location: "../vendors/ufo-kit/",
+      main: "ufo-kit"
+    }
+  ],
 }

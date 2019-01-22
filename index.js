@@ -25,19 +25,22 @@
       var packages = [];
 
       for (var i = 0; i < arguments.length; i++) {
-        Object.assign(paths, arguments[i].default.paths);
-        Object.assign(shim, arguments[i].default.shim);
-        packages.concat(arguments[i].default.packages);
+        var obj = arguments[i].default;
+        if (obj.paths !== undefined) Object.assign(paths, arguments[i].default.paths);
+        if (obj.shim !== undefined) Object.assign(shim, arguments[i].default.shim);
+        if (obj.packages !== undefined) packages = packages.concat(arguments[i].default.packages);
       }
 
-      require.config({
+      var cfg = {
         waitSeconds: 30,
         paths: paths,
         shim: shim,
         packages: packages
-      });
+      };
 
-      main();
+      require.config(cfg);
+
+      main(cfg);
     });
   };
 

@@ -17,7 +17,10 @@
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-  (0, _index.default)(['./config', './config2'], function () {
+  (0, _index.default)(['./config', './config2'], function (cfg) {
+    console.log('obj:');
+    console.log(cfg);
+
     require(['react', 'jquery'], function (React, JQuery) {
       console.log(React);
       console.log(JQuery);
