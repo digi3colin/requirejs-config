@@ -1,8 +1,8 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(["//unpkg.com/requirejs-config@1.0.0/index.min"], factory);
+    define(["../index"], factory);
   } else if (typeof exports !== "undefined") {
-    factory(require("//unpkg.com/requirejs-config@1.0.0/index.min"));
+    factory(require("../index"));
   } else {
     var mod = {
       exports: {}

@@ -22,16 +22,19 @@
     require(files, function (config) {
       var paths = {};
       var shim = {};
+      var packages = [];
 
       for (var i = 0; i < arguments.length; i++) {
         Object.assign(paths, arguments[i].default.paths);
         Object.assign(shim, arguments[i].default.shim);
+        packages.concat(arguments[i].default.packages);
       }
 
       require.config({
         waitSeconds: 30,
         paths: paths,
-        shim: shim
+        shim: shim,
+        packages: packages
       });
 
       main();
